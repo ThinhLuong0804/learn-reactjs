@@ -15,7 +15,7 @@ function ListPage(props) {
     (async () => {
       const params = {
         _page: 1,
-        _limit: 10,
+        _limit: 12,
       };
 
       // .data ở cuối để chỉ lấy data mà không có pagination
