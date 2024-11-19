@@ -1,0 +1,14 @@
+.album {
+  $thumnail_size: 190px;
+
+  &__thumbnail {
+    & > img {
+      width: $thumnail_size;
+      border-radius: 5px;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+}
