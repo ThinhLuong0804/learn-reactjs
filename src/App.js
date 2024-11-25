@@ -2,15 +2,11 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import productApi from './api/productApi';
 import './App.css';
 import { DefaultLayout } from './components/Layout';
 import { publicRoutes } from './routes';
-import userApi from './api/userApi';
-import { useSnackbar } from 'notistack';
-import { Button } from '@mui/material';
 
 function App() {
   // //   const fetchUser = async () => {
