@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FilterCategory from './Filters/FilterCategory';
+import FilterPrice from './Filters/FilterPrice';
+import { Box } from '@mui/material';
 
 ProductFilters.propTypes = {
   filters: PropTypes.object.isRequired,
@@ -19,7 +21,24 @@ function ProductFilters({ filters, onChange }) {
     return onChange(newFilters);
   };
 
-  return <FilterCategory onChange={handleCategoryChange} />;
+  const handlePriceChange = (priceValues) => {
+    if (!onChange) return;
+
+    // Cập nhật giá trị lọc giá và truyền vào onChange
+    const newFilters = {
+      ...filters,
+      ...priceValues, // Kết hợp các giá trị giá lọc
+    };
+
+    onChange(newFilters);
+  };
+
+  return (
+    <Box>
+      <FilterCategory onChange={handleCategoryChange} />
+      <FilterPrice onChange={handlePriceChange}></FilterPrice>
+    </Box>
+  );
 }
 
 export default ProductFilters;

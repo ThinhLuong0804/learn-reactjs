@@ -66,6 +66,7 @@ function ListPage(props) {
     setFilters((prevFilters) => ({
       ...prevFilters,
       ...newFilters,
+      _page: 1, // Reset về trang 1 khi thay đổi bộ lọc
     }));
   };
 
